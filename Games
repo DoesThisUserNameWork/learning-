@@ -1,0 +1,81 @@
+import random
+
+money = 100
+
+#Write your game of chance functions here
+def coin_flip(call, bet):
+  h_t = random.randint(1,2)
+  
+  if call == h_t:
+    print('You win')
+    return (money + bet)
+  else:
+    print('You lose')
+    return (money - bet)
+
+
+
+
+
+
+def cho_han(guess, bet):
+  roll1 = random.randint(1,6)
+  roll2 = random.randint(1,6)
+  
+  if guess == 'even' and ((roll1+roll2)%2==0):
+    print('You win')
+    print(roll1+roll2)
+    return(money + bet)
+  elif guess == 'odd' and ((roll1+roll2)%2 !=0):
+    print('You win')
+    print(roll1+roll2)
+    return (money+bet)
+  else:
+    print('You lose')
+    print(roll1+roll2)
+    return(money-bet)
+  
+
+money1=100
+money2=100
+  
+  
+def card_game(better1, better2):
+  draw1 = random.randint(1,10)
+  draw2 = random.randint(1,10)
+  
+  if (draw1>draw2):
+    print('Player 1 wins')
+    return(money1+better2)
+  elif (draw1<draw2):
+    print('Player 2 wins')
+    return(money2+better1)
+  else:
+    print('Draw')
+    
+    
+
+
+
+  
+def roulette_game(call, bet):
+  spin = random.randint(0,37)
+  
+  
+ 
+  
+  if call== "red" and ((spin)%2==0):
+    print("Red Wins")
+    return(money+bet)
+  elif call == "black" and ((spin)%2!=0):
+    print('Black Wins')
+    return (money+bet)
+  elif call == spin:
+    print ('You won!')
+    return (money+(bet*37))
+  else:
+    print('You lost')
+    return(money-bet)
+  
+  
+  
